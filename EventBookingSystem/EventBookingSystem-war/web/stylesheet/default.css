@@ -1,0 +1,16 @@
+/* 
+    Document   : default
+    Created on : Aug 18, 2013, 1:30:49 AM
+    Author     : Stanley
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.errorMessage{
+    color:red;
+}
+
