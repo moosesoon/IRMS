@@ -170,7 +170,7 @@ public class numberAdditionUI extends javax.swing.JFrame {
         num1 = Float.parseFloat(jTextField1.getText());
         num2 = Float.parseFloat(jTextField2.getText());
        // Now we can perform the addition.
-        result = num1+num2+num1;
+        result = num1+num2+num1+num2;
         // We will now pass the value of result to jTextField3.
         // At the same time, we are going to
         // change the value of result from a float to a string.
