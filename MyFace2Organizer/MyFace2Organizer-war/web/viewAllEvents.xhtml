@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="./template/DefaultTemplate.xhtml">
+
+    <ui:define name="leftInsert">
+        You are now at viewAllEvents
+    </ui:define>
+
+    <ui:define name="contentInsert">
+        <h:dataTable cellpadding="3px" cellspacing="1px" styleClass="allaroundborder" headerClass="allaroundborder" columnClasses="allaroundborder" rowClasses="allaroundborder" value="#{eventDataTableBean.events}" var="event">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Event ID" />
+                </f:facet>
+                <h:outputText value="#{event.eventId}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Event Name" />
+                </f:facet>
+                <h:outputText value="#{event.eventName}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Start Date/Time" />
+                </f:facet>
+                <h:outputText value="#{event.startDateTime}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="End Date/Time" />
+                </f:facet>
+                <h:outputText value="#{event.endDateTime}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Venue Name" />
+                </f:facet>
+                <h:outputText value="#{event.venue.venueName}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="System User" />
+                </f:facet>
+                <h:outputText value="#{event.systemUser.userName}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Status" />
+                </f:facet>
+                <h:outputText value="#{event.status}" />
+            </h:column>
+        </h:dataTable>
+
+    </ui:define>
+
+</ui:composition>
